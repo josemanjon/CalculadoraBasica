@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/numero1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:layout_marginEnd="85dp"
+        android:layout_marginStart="84dp"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:hint="Número 1"
+        app:layout_constraintBottom_toTopOf="@+id/numero2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/numero2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="392dp"
+        android:layout_marginEnd="85dp"
+        android:layout_marginStart="84dp"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:hint="Número 2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/numero1" />
+
+    <Button
+        android:id="@+id/botonSuma"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="39dp"
+        android:layout_marginStart="84dp"
+        android:layout_marginTop="16dp"
+        android:onClick="sumar"
+        android:text="+"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/botonDividir"
+        app:layout_constraintEnd_toStartOf="@+id/botonResta"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/numero2" />
+
+    <Button
+        android:id="@+id/botonResta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="85dp"
+        android:layout_marginStart="39dp"
+        android:layout_marginTop="16dp"
+        android:onClick="restar"
+        android:text="-"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/botonMultiplicar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/botonSuma"
+        app:layout_constraintTop_toBottomOf="@+id/numero2"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/botonMultiplicar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="85dp"
+        android:layout_marginStart="39dp"
+        android:layout_marginTop="8dp"
+        android:onClick="multiplicar"
+        android:text="X"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/botonDividir"
+        app:layout_constraintTop_toBottomOf="@+id/botonResta" />
+
+    <Button
+        android:id="@+id/botonDividir"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="39dp"
+        android:layout_marginStart="84dp"
+        android:layout_marginTop="8dp"
+        android:onClick="dividir"
+        android:text="/"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@+id/botonMultiplicar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/botonSuma" />
+
+    <TextView
+        android:id="@+id/Resultado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="218dp"
+        android:layout_marginEnd="124dp"
+        android:layout_marginStart="125dp"
+        android:layout_marginTop="148dp"
+        android:text="@string/resultado"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/numero2"
+        app:layout_constraintVertical_bias="0.217" />
+
+</android.support.constraint.ConstraintLayout>
