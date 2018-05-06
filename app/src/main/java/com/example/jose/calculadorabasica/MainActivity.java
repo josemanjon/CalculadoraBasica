@@ -25,18 +25,18 @@ public class MainActivity extends AppCompatActivity {
 
     public void sumar(View v){
 
-        int n1=Integer.parseInt(num1.getText().toString());
-        int n2=Integer.parseInt(num2.getText().toString());
-        int suma=n1+n2;
+        double n1=Integer.parseInt(num1.getText().toString());
+        double n2=Integer.parseInt(num2.getText().toString());
+        double suma=n1+n2;
 
         res.setText(suma+"");
     }
 
     public void restar(View v){
 
-        int n1=Integer.parseInt(num1.getText().toString());
-        int n2=Integer.parseInt(num2.getText().toString());
-        int resta=n1-n2;
+        double n1=Integer.parseInt(num1.getText().toString());
+        double n2=Integer.parseInt(num2.getText().toString());
+        double resta=n1-n2;
 
         res.setText(resta+"");
 
@@ -44,28 +44,28 @@ public class MainActivity extends AppCompatActivity {
 
     public void multiplicar(View v){
 
-        int n1=Integer.parseInt(num1.getText().toString());
-        int n2=Integer.parseInt(num2.getText().toString());
-        int mul=n1*n2;
+        double n1=Integer.parseInt(num1.getText().toString());
+        double n2=Integer.parseInt(num2.getText().toString());
+        double mul=n1*n2;
 
         res.setText(mul+"");
     }
 
     public void dividir(View v){
 
-        int n1=Integer.parseInt(num1.getText().toString());
-        int n2=Integer.parseInt(num2.getText().toString());
-        int aviso=0;
-        if (n2!=0){
-            int div = n1 / n2;
-            res.setText(div+"");
-        }
-        else
+        double n1=Integer.parseInt(num1.getText().toString());
+        double n2=Integer.parseInt(num2.getText().toString());
+        double aviso=0;
+        double div=n1/n2;
+        if (n2==0){
             res.setText("Error");
             mostrar(aviso);
+        }
+        else
+            res.setText(div+"");
     }
 
-    private void mostrar(int res){
+    private void mostrar(double res){
 
         Toast toast= Toast.makeText(this, "No se puede dividir entre 0.", Toast.LENGTH_SHORT);
         toast.setGravity(Gravity.BOTTOM,0,0);
