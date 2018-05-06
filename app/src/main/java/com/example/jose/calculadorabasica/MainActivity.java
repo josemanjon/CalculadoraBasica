@@ -25,8 +25,8 @@ public class MainActivity extends AppCompatActivity {
 
     public void sumar(View v){
 
-        double n1=Integer.parseInt(num1.getText().toString());
-        double n2=Integer.parseInt(num2.getText().toString());
+        double n1=Double.parseDouble(num1.getText().toString());
+        double n2=Double.parseDouble(num2.getText().toString());
         double suma=n1+n2;
 
         res.setText(suma+"");
@@ -34,8 +34,8 @@ public class MainActivity extends AppCompatActivity {
 
     public void restar(View v){
 
-        double n1=Integer.parseInt(num1.getText().toString());
-        double n2=Integer.parseInt(num2.getText().toString());
+        double n1=Double.parseDouble(num1.getText().toString());
+        double n2=Double.parseDouble(num2.getText().toString());
         double resta=n1-n2;
 
         res.setText(resta+"");
@@ -44,8 +44,8 @@ public class MainActivity extends AppCompatActivity {
 
     public void multiplicar(View v){
 
-        double n1=Integer.parseInt(num1.getText().toString());
-        double n2=Integer.parseInt(num2.getText().toString());
+        double n1=Double.parseDouble(num1.getText().toString());
+        double n2=Double.parseDouble(num2.getText().toString());
         double mul=n1*n2;
 
         res.setText(mul+"");
@@ -53,8 +53,8 @@ public class MainActivity extends AppCompatActivity {
 
     public void dividir(View v){
 
-        double n1=Integer.parseInt(num1.getText().toString());
-        double n2=Integer.parseInt(num2.getText().toString());
+        double n1=Double.parseDouble(num1.getText().toString());
+        double n2=Double.parseDouble(num2.getText().toString());
         double aviso=0;
         double div=n1/n2;
         if (n2==0){
