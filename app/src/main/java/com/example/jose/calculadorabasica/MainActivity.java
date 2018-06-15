@@ -25,50 +25,76 @@ public class MainActivity extends AppCompatActivity {
 
     public void sumar(View v){
 
-        double n1=Double.parseDouble(num1.getText().toString());
-        double n2=Double.parseDouble(num2.getText().toString());
-        double suma=n1+n2;
+        if ((num1.getText().toString().trim().equalsIgnoreCase(""))||(num2.getText().toString().trim().equalsIgnoreCase(""))){
+            res.setText("Error");
+            Toast toast= Toast.makeText(this, "Complete ambos campos", Toast.LENGTH_SHORT);
+            toast.setGravity(Gravity.BOTTOM,0,0);
+            toast.show();
+        }
+        else {
+            double n1 = Double.parseDouble(num1.getText().toString());
+            double n2 = Double.parseDouble(num2.getText().toString());
+            double suma = n1 + n2;
 
-        res.setText(suma+"");
+            res.setText(suma + "");
+        }
     }
 
     public void restar(View v){
 
-        double n1=Double.parseDouble(num1.getText().toString());
-        double n2=Double.parseDouble(num2.getText().toString());
-        double resta=n1-n2;
+        if ((num1.getText().toString().trim().equalsIgnoreCase(""))||(num2.getText().toString().trim().equalsIgnoreCase(""))){
+            res.setText("Error");
+            Toast toast= Toast.makeText(this, "Complete ambos campos", Toast.LENGTH_SHORT);
+            toast.setGravity(Gravity.BOTTOM,0,0);
+            toast.show();
+        }
+        else {
+            double n1 = Double.parseDouble(num1.getText().toString());
+            double n2 = Double.parseDouble(num2.getText().toString());
+            double resta = n1 - n2;
 
-        res.setText(resta+"");
+            res.setText(resta + "");
+        }
 
     }
 
     public void multiplicar(View v){
 
-        double n1=Double.parseDouble(num1.getText().toString());
-        double n2=Double.parseDouble(num2.getText().toString());
-        double mul=n1*n2;
+        if ((num1.getText().toString().trim().equalsIgnoreCase(""))||(num2.getText().toString().trim().equalsIgnoreCase(""))){
+            res.setText("Error");
+            Toast toast= Toast.makeText(this, "Complete ambos campos", Toast.LENGTH_SHORT);
+            toast.setGravity(Gravity.BOTTOM,0,0);
+            toast.show();
+        }
+        else {
+            double n1 = Double.parseDouble(num1.getText().toString());
+            double n2 = Double.parseDouble(num2.getText().toString());
+            double mul = n1 * n2;
 
-        res.setText(mul+"");
+            res.setText(mul + "");
+        }
     }
 
     public void dividir(View v){
 
-        double n1=Double.parseDouble(num1.getText().toString());
-        double n2=Double.parseDouble(num2.getText().toString());
-        double aviso=0;
-        double div=n1/n2;
-        if (n2==0){
+        if ((num1.getText().toString().trim().equalsIgnoreCase(""))||(num2.getText().toString().trim().equalsIgnoreCase(""))){
             res.setText("Error");
-            mostrar(aviso);
+            Toast toast= Toast.makeText(this, "Complete ambos campos", Toast.LENGTH_SHORT);
+            toast.setGravity(Gravity.BOTTOM,0,0);
+            toast.show();
         }
-        else
-            res.setText(div+"");
-    }
-
-    private void mostrar(double res){
-
-        Toast toast= Toast.makeText(this, "No se puede dividir entre 0.", Toast.LENGTH_SHORT);
-        toast.setGravity(Gravity.BOTTOM,0,0);
-        toast.show();
+        else {
+            double n1 = Double.parseDouble(num1.getText().toString());
+            double n2 = Double.parseDouble(num2.getText().toString());
+            double aviso = 0;
+            double div = n1 / n2;
+            if (n2 == 0) {
+                res.setText("Error");
+                Toast toast= Toast.makeText(this, "No se puede dividir entre 0.", Toast.LENGTH_SHORT);
+                toast.setGravity(Gravity.BOTTOM,0,0);
+                toast.show();
+            } else
+                res.setText(div + "");
+        }
     }
 }
